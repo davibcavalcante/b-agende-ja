@@ -1,0 +1,22 @@
+from pydantic import BaseModel, Field
+from bson import ObjectId
+from typing import Optional
+
+class PyObjectId(ObjectId):
+    @classmethod
+    def __get_validators__(cls):
+        yield cls.validate
+
+    @classmethod
+    def validate(cls, v, field=None):  # Adiciona o argumento 'field'
+        if not ObjectId.is_valid(v):
+            raise ValueError("Invalid ObjectId")
+        return str(v)
+
+class User(BaseModel):
+    id: Optional[PyObjectId] = Field(default=None, alias="_id")  # Mapeia o _id do MongoDB
+    nome: str
+    senha: str
+    mae: str
+    nascimento: str
+    cpf: str

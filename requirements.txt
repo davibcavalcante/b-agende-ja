@@ -1,0 +1,9 @@
+Flask
+pymongo
+Flask-CORS
+bcrypt
+pydantic
+PyJWT
+flask-jwt-extended
+secure-smtplib
+fastapi
