@@ -6,4 +6,3 @@ pydantic
 PyJWT
 flask-jwt-extended
 secure-smtplib
-fastapi
