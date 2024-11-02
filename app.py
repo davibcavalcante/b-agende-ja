@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
 from app.config import Config
 from app.routes.users import users_bp
@@ -15,6 +15,10 @@ def create_app():
     app.register_blueprint(users_bp)
     app.register_blueprint(available_slots_bp)
     app.register_blueprint(appointments_bp)
+    
+    @app.route('/')
+    def home():
+        return jsonify(message="Servidor rodando!")
 
     return app
 
