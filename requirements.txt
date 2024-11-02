@@ -6,3 +6,4 @@ PyJWT==2.9.0
 PyJWT==2.9.0
 pymongo==4.10.1
 bcrypt
+python-dotenv
