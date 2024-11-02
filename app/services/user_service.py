@@ -34,7 +34,7 @@ def login(data):
         token = create_token(str(user['_id']))
         return {'token': token, 'user_id': str(user['_id']), 'msg': 'Login bem-sucedido'}
     
-    return ValueError('Credenciais inválidas')
+    return {'error': 'Credenciais inválidas'}
 
 def register(data):
     if users_collection.find_one({"cpf": data["cpf"]}):

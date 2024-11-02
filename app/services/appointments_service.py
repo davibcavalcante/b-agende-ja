@@ -81,10 +81,6 @@ def sendMail(mailTo, mailData):
     servidor.send_message(mensagem)
     servidor.quit()
 
-    print(f"E-mail enviado para {mailTo}")
-    
-    
-
 def post_appointments(data):
     mail = data['paciente_email']
     
@@ -131,7 +127,6 @@ def post_appointments(data):
         appointment_instance = Appointments(**appointment_data)
         result = ap_collection.insert_one(appointment_instance.dict(by_alias=True))
         
-        print(str(result.inserted_id))
         id = re.sub(r'\D', '', str(result.inserted_id))
         
         dataFormatted = appointment_data['vaga'].data.strftime('%d/%m/%Y')
