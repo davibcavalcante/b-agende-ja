@@ -1,8 +1,8 @@
-from ..models.available_slots_model import AvailableSlots
-from ..models.doctor_model import Doctor
-from ..models.health_unity_model import HealthUnity
+from models.available_slots_model import AvailableSlots
+from models.doctor_model import Doctor
+from models.health_unity_model import HealthUnity
 from pymongo import MongoClient
-from ..config import Config
+from config import Config
 from bson import ObjectId
 from bson.errors import InvalidId
 

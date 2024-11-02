@@ -1,7 +1,7 @@
 from flask import request, jsonify
 from functools import wraps
 import jwt
-from ..config import Config
+from config import Config
 
 def verify_token(token):
     try:

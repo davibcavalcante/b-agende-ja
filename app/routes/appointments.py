@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
-from ..services.appointments_service import post_appointments
-from ..middleware.auth import token_required
+from services.appointments_service import post_appointments
+from middleware.auth import token_required
 
 appointments_bp = Blueprint('appointments', __name__)
 

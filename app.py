@@ -1,9 +1,9 @@
 from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
-from .app.config import Config
-from .app.routes.users import users_bp
-from .app.routes.available_slots import available_slots_bp
-from .app.routes.appointments import appointments_bp
+from app.config import Config
+from app.routes.users import users_bp
+from app.routes.available_slots import available_slots_bp
+from app.routes.appointments import appointments_bp
 from flask_cors import CORS
 
 def create_app():
