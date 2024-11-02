@@ -8,13 +8,13 @@ class PyObjectId(ObjectId):
         yield cls.validate
 
     @classmethod
-    def validate(cls, v, field=None):  # Adiciona o argumento 'field'
+    def validate(cls, v, field=None):
         if not ObjectId.is_valid(v):
             raise ValueError("Invalid ObjectId")
         return str(v)
 
 class User(BaseModel):
-    id: Optional[PyObjectId] = Field(default=None, alias="_id")  # Mapeia o _id do MongoDB
+    id: Optional[PyObjectId] = Field(default=None, alias="_id")
     nome: str
     senha: str
     mae: str

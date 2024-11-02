@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
-from services.available_slots_service import get_available_slots, delete_available_slots
-from middleware.auth import token_required
+from ..services.available_slots_service import get_available_slots, delete_available_slots
+from ..middleware.auth import token_required
 
 available_slots_bp = Blueprint('available_slots', __name__)
 

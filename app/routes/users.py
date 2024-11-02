@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from services.user_service import get_users, login, register
+from ..services.user_service import get_users, login, register
 
 users_bp = Blueprint('users', __name__)
 

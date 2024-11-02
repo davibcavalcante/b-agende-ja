@@ -1,6 +1,6 @@
 from flask import Flask
-from config import Config
-from routes import routes_blueprint
+from .config import Config
+from .routes import routes_blueprint
 
 def create_app():
     app = Flask(__name__)

@@ -1,8 +1,8 @@
-from models.user_model import User
+from ..models.user_model import User
 from pymongo import MongoClient
 from bson import ObjectId
 from pymongo.errors import DuplicateKeyError
-from config import Config
+from ..config import Config
 from flask import current_app
 import jwt
 import datetime
