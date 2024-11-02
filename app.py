@@ -1,9 +1,7 @@
 from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
 from .app.config import Config
-from .app.routes.users import users_bp
-from .app.routes.available_slots import available_slots_bp
-from .app.routes.appointments import appointments_bp
+from app.routes import routes_blueprint
 from flask_cors import CORS
 
 def create_app():
@@ -12,9 +10,7 @@ def create_app():
     CORS(app)
     jwt = JWTManager(app)
 
-    app.register_blueprint(users_bp)
-    app.register_blueprint(available_slots_bp)
-    app.register_blueprint(appointments_bp)
+    app.register_blueprint(routes_blueprint)
     
     @app.route('/')
     def home():
