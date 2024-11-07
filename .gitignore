@@ -2,3 +2,4 @@ venv
 .env
 .vercel
 node_modules
+config.py
