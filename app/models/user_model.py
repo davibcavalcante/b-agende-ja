@@ -20,3 +20,4 @@ class User(BaseModel):
     mae: str
     nascimento: str
     cpf: str
+    cns: str

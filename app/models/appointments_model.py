@@ -28,3 +28,4 @@ class Appointments(BaseModel):
     paciente_tel: str
     paciente_email: str
     paciente_rg: str
+    paciente_cns: str

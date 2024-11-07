@@ -121,6 +121,7 @@ def post_appointments(data):
         "paciente_tel": data["paciente_tel"],
         "paciente_email": data["paciente_email"],
         "paciente_rg": data["paciente_rg"],
+        "paciente_cns": data["paciente_cns"]
     }
 
     try:
