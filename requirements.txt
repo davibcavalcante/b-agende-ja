@@ -5,4 +5,8 @@ pydantic==2.9.2
 PyJWT==2.9.0
 PyJWT==2.9.0
 pymongo==4.10.1
+<<<<<<< HEAD
 bcrypt==4.2.0
+=======
+bcrypt==4.2.0
+>>>>>>> 8bb2a90107acebe9ceaac084ee08e840c25988d4
